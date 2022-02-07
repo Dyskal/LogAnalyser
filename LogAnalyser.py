@@ -54,7 +54,6 @@ def analyze(content: str, users_list: list[User]) -> None:
 
             for ip_line in ip_iter:
                 if curr_user.username + '[' in ip_line:
-                    print(ip_line)
                     curr_user.add_ip(ip_line.split('/')[2].split(':')[0])
                     break
 
